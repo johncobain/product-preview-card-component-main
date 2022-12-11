@@ -1,0 +1,131 @@
+/*
+- Mobile: 375px
+- Desktop: 1440px
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Playfair+Display:wght@700&display=swap');
+:root{
+    /* Primary */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+.component{
+    display: flex;
+    background-color: var(--white);
+    border-radius: 7px;
+    height: 500px;
+    width: 700px;
+    margin: auto;
+}
+
+.component .cover {
+    border-radius: 7px 0 0 7px;
+    background: url(./images/image-product-desktop.jpg);
+    background-size: cover;
+    width: 50%;
+}
+
+.component .content{
+    width: 50%;
+    padding: 30px;
+}
+
+.content .label{
+    letter-spacing: 7px;
+}
+
+.content h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--very-dark-blue);
+    margin: 25px 0;
+    line-height: 40px;
+}
+
+.content p{
+    line-height: 25px;
+}
+
+.content .price span{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--dark-cyan);
+    margin-right:15px;
+}
+
+.content button {
+    margin-top: 25px;
+    color: var(--white);
+    background-color: var(--dark-cyan);
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 7px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.content button:hover{
+    background-color: hsl(158, 36%, 20%);
+}
+
+.attribution{
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 430px) {
+    .component{
+        flex-direction: column;
+        width: 90%;
+        height: 90%;
+    }
+
+    .component .cover{
+        width: 100%;
+        height: 45%;
+        background-position: center;
+        border-radius: 7px 7px 0 0;
+
+    }
+
+    .component .content{
+        width: 100%;
+    }
+
+    .content h1, .content .price span{
+        font-size: 35px;
+    }
+}
